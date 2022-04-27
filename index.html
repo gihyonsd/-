@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <title>얼얼~한 매운맛 쿵푸마라</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
-  
+
   <div class="container">
     <!--헤더-->
 
@@ -101,104 +101,68 @@
       <input type="radio" id="maindish" name="tab" checked>
       <input type="radio" id="side" name="tab">
       <input type="radio" id="drink" name="tab">
-  
+
       <section class="buttons">
         <label for="maindish">메인 메뉴</label>
         <label for="side">사이드 메뉴</label>
         <label for="drink">음료수</label>
       </section>
-  
+
       <div class="tabContent">
         <ul>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 마라탕.png">
               <div class="caption">
                 <h2 id="mainName1">마라탕</h2>
-                <p id="mainPrice1">7000원</p>
-                <button onclick="add1('a',7000);">+</button>
-                <button onclick="sub1('a',7000);">-</button>
+                <p id="mainPrice1">8,000원</p>
+                <div class="but">
+                  <button onclick="sub1('a',8000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add1('a',8000);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 마라샹궈.png">
               <div class="caption">
-                <h2  id="mainName2">마라롱샤</h2>
-                <p id="mainPrice2">5000원</p>
-                <button onclick="add2('b',5000);">+</button>
-                <button onclick="sub2('b',5000);">-</button>
+                <h2 id="mainName2">마라샹궈</h2>
+                <p id="mainPrice2">10,000원</p>
+                <div class="but">
+                  <button onclick="sub2('b',10000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add2('b',10000);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 로제마라탕.png">
               <div class="caption">
-                <h2 id="mainName3">꿔바로우</h2>
-                <p id="mainPrice3">7000원</p>
-                <button onclick="add3('c',7000);">+</button>
-                <button onclick="sub3('c',7000);">-</button>
+                <h2 id="mainName3">로제 마라탕</h2>
+                <p id="mainPrice3">9,000원</p>
+                <div class="but">
+                  <button onclick="sub3('c',9000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add3('c',9000);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 로제마라샹궈.png">
               <div class="caption">
-                <h2 id="mainName4">등등</h2>
-                <p id="mainPrice4">7000원</p>
-                <button onclick="add4('d',7000);">+</button>
-                <button onclick="sub4('d',7000);">-</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="tabContent">
-        <ul>
-          <li class="item">
-            <div class="product">
-              <img src="#">
-              <div class="caption">
-                <h2 id = "sideName1">사이드</h2>
-                <p id="sidePrice1">7000원</p>
-                <button onclick="add5('e',7000);">+</button>
-                <button onclick="sub5('e',7000);">-</button>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="product">
-              <img src="#">
-              <div class="caption">
-                <h2 id = "sideName2">사이드</h2>
-                <p id="sidePrice2">7000원</p>
-                <button onclick="add6('f',7000);">+</button>
-                <button onclick="sub6('f',7000);">-</button>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="product">
-              <img src="#">
-              <div class="caption">
-                <h2 id = "sideName3">사이드</h2>
-                <p id="sidePrice3">7000원</p>
-                <button onclick="add7('g',7000);">+</button>
-                <button onclick="sub7('g',7000);">-</button>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="product">
-              <img src="#">
-              <div class="caption">
-                <h2 id = "sideName4">사이드</h2>
-                <p id="sidePrice4">7000원</p>
-                <button onclick="add8('h',7000);">+</button>
-                <button onclick="sub8('h',7000);">-</button>
+                <h2 id="mainName4">로제 마라샹궈</h2>
+                <p id="mainPrice4">11,000원</p>
+                <div class="but">
+                  <button onclick="sub4('d',11000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add4('d',11000);">+</button>
+                </div>
               </div>
             </div>
           </li>
@@ -208,45 +172,117 @@
         <ul>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 통새우꿔바로우.png">
               <div class="caption">
-                <h2 id = "drinkName1">사이다</h2>
-                <p id="drinkPrice1">7000원</p>
-                <button onclick="add9('i',7000);">+</button>
-                <button onclick="sub9('i',7000);">-</button>
+                <h2 id="sideName1">통새우 꿔바로우</h2>
+                <p id="sidePrice1">6,000원</p>
+                <div class="but">
+                  <button onclick="sub5('e',6000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add5('e',6000);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 통새우크림꿔바로우.png">
               <div class="caption">
-                <h2 id = "drinkName2">콜라</h2>
-                <p id="drinkPrice2">7000원</p>
-                <button onclick="add10('j',7000);">+</button>
-                <button onclick="sub10('j',7000);">-</button>
+                <h2 id="sideName2">크림 꿔바로우</h2>
+                <p id="sidePrice2">7,000원</p>
+                <div class="but">
+                  <button onclick="sub6('f',7000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add6('f',7000);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 마라갈비만두.png">
               <div class="caption">
-                <h2 id = "drinkName3">테라</h2>
-                <p id="drinkPrice3">7000원</p>
-                <button onclick="add11('k',7000);">+</button>
-                <button onclick="sub11('k',7000);">-</button>
+                <h2 id="sideName3">마라 갈비만두</h2>
+                <p id="sidePrice3">6,500원</p>
+                <div class="but">
+                  <button onclick="sub7('g',6500);">-</button>
+                  <p>수량</p>
+                  <button onclick="add7('g',6500);">+</button>
+                </div>
               </div>
             </div>
           </li>
           <li class="item">
             <div class="product">
-              <img src="#">
+              <img src="img/메뉴 마라주먹밥.png">
               <div class="caption">
-                <h2 id = "drinkName4">소주</h2>
-                <p id="drinkPrice4">7000원</p>
-                <button onclick="add12('l',7000);">+</button>
-                <button onclick="sub12('l',7000);">-</button>
+                <h2 id="sideName4">마라 주먹밥</h2>
+                <p id="sidePrice4">5,000원</p>
+                <div class="but">
+                  <button onclick="sub8('h',5000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add8('h',5000);">+</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="img/연태고량주.png">
+              <div class="caption">
+                <h2 id="drinkName1">연태 고량주</h2>
+                <p id="drinkPrice1">8,000원</p>
+                <div class="but">
+                  <button onclick="sub9('i',8000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add9('i',8000);">+</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="img/칭따오.png">
+              <div class="caption">
+                <h2 id="drinkName2">칭따오</h2>
+                <p id="drinkPrice2">6,000원</p>
+                <div class="but">
+                  <button onclick="sub10('j',6000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add10('j',6000);">+</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="img/소주.png">
+              <div class="caption">
+                <h2 id="drinkName3">소주</h2>
+                <p id="drinkPrice3">5,000원</p>
+                <div class="but">
+                  <button onclick="sub11('k',5000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add11('k',5000);">+</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="img/콜라.png">
+              <div class="caption">
+                <h2 id="drinkName4">콜라</h2>
+                <p id="drinkPrice4">2,000원</p>
+                <div class="but">
+                  <button onclick="sub12('l',2000);">-</button>
+                  <p>수량</p>
+                  <button onclick="add12('l',2000);">+</button>
+                </div>
               </div>
             </div>
           </li>
@@ -277,46 +313,46 @@
 
 
     <footer>
-        <div class="snowflakes" aria-hidden="true">
-          <div class="snowflake">
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
           <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
-          <div class="snowflake">
-            <img src="./img/pepper.png" width="50px" height="50px">
-          </div>
         </div>
-        <div class="topfooter">
-          <div class="ftlogo">
-            <a href="#"><img src="./img/white1.png" alt="하단 로고"></a>
-            <p>주식회사 쿵푸마라 주소 : 경기도 수원시 영통구 영통로 217번길 6 망포역 센터프라자 3층  
-              대표: 개발새발<br />사업자등록번호 : 22A-78-25493  소비자 대표번호 : 031-224-3626</p><br />
-          </div>
-          <div class="ftdiv">
-            <a href="#">회사소개</a>
-            <a href="#">찾아오시는 길</a>
-            <a href="#">이용약관</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">이메일무단수집거부</a>
-          </div>
-          </div>
-        <div class="bottomfooter">
-          COPYRIGHT © by KUNG FU MARA. ALL RIGHTS RESERVED
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
         </div>
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+        </div>
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+        </div>
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+        </div>
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+        </div>
+        <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+        </div>
+      </div>
+      <div class="topfooter">
+        <div class="ftlogo">
+          <a href="#"><img src="./img/white1.png" alt="하단 로고"></a>
+          <p>주식회사 쿵푸마라 주소 : 경기도 수원시 영통구 영통로 217번길 6 망포역 센터프라자 3층
+            대표: 개발새발<br />사업자등록번호 : 22A-78-25493 소비자 대표번호 : 031-224-3626</p><br />
+        </div>
+        <div class="ftdiv">
+          <a href="#">회사소개</a>
+          <a href="#">찾아오시는 길</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이메일무단수집거부</a>
+        </div>
+      </div>
+      <div class="bottomfooter">
+        COPYRIGHT © by KUNG FU MARA. ALL RIGHTS RESERVED
+      </div>
     </footer>
   </div>
 </body>

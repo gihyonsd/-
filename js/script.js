@@ -1,15 +1,15 @@
-var newWin = window.open("popup.html", "popup", "width=500, height=700", "left=400, top=200");
-if(newWin == null) {
-  alert("팝업이 차단되었으니 해제해주세요.");
-}
-function clickEffect(e){
-  var d=document.createElement("div");
-  d.className="clickEffect";
-  d.style.top=e.clientY+"px";d.style.left=e.clientX+"px";
-  document.body.appendChild(d);
-  d.addEventListener('animationend', function(){d.parentElement.removeChild(d);}.bind(this));
-}
-document.addEventListener('click', clickEffect);
+// var newWin = window.open("popup.html", "popup", "width=500, height=700", "left=400, top=200");
+// if(newWin == null) {
+//   alert("팝업이 차단되었으니 해제해주세요.");
+// }
+// function clickEffect(e){
+//   var d=document.createElement("div");
+//   d.className="clickEffect";
+//   d.style.top=e.clientY+"px";d.style.left=e.clientX+"px";
+//   document.body.appendChild(d);
+//   d.addEventListener('animationend', function(){d.parentElement.removeChild(d);}.bind(this));
+// }
+// document.addEventListener('click', clickEffect);
 
 
 

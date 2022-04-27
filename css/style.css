@@ -80,7 +80,7 @@ font-family: 'Cafe24Dangdanghae';
         .snowflake:nth-of-type(11){left:65%;
           -webkit-animation-delay:4s,2.5s;
           animation-delay:4s,2.5s}
-          
+
 a{
 text-decoration:none;
 display:block;
@@ -513,6 +513,14 @@ nav {
       .tabContent ul li .product:hover .caption {
         opacity: 1;
         transform: translateY(-174px);
+      }
+      .tabContent ul li .product .caption .but {
+        margin-left: 40px;
+        display: flex;
+      }
+      .tabContent ul li .product .caption .but button {
+        margin: 5px;
+        width: 20px;
       }
   
       .caption h2 {
