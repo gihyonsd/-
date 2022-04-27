@@ -1,15 +1,15 @@
-// var newWin = window.open("popup.html", "popup", "width=500, height=700", "left=400, top=200");
-// if(newWin == null) {
-//   alert("팝업이 차단되었으니 해제해주세요.");
-// }
-// function clickEffect(e){
-//   var d=document.createElement("div");
-//   d.className="clickEffect";
-//   d.style.top=e.clientY+"px";d.style.left=e.clientX+"px";
-//   document.body.appendChild(d);
-//   d.addEventListener('animationend', function(){d.parentElement.removeChild(d);}.bind(this));
-// }
-// document.addEventListener('click', clickEffect);
+// // var newWin = window.open("popup.html", "popup", "width=500, height=700", "left=400, top=200");
+// // if(newWin == null) {
+// //   alert("팝업이 차단되었으니 해제해주세요.");
+// // }
+function clickEffect(e) {
+  var d = document.createElement("div");
+  d.className = "clickEffect";
+  d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
+  document.body.appendChild(d);
+  d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
+}
+document.addEventListener('click', clickEffect);
 
 
 
@@ -18,6 +18,13 @@ let menu;
 let price;
 let sum = 0;
 let suma = 0;
+let sumb = 0;
+let sumc = 0;
+let sumd = 0;
+let sume = 0;
+let sumf = 0;
+let sumg = 0;
+let sumh = 0;
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
@@ -41,7 +48,7 @@ function add1(menu, price) {
   let b = document.getElementById('mainPrice1').innerText;
   let msg1 = a + " : " + b;
   document.querySelector("#msg1").innerHTML = msg1;
-  sum = suma;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
 }
 
@@ -55,7 +62,7 @@ function sub1(menu, price) {
   else if (count1 == 0) {
     document.querySelector("#msg1").innerHTML = "";
   }
-  sum = suma;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   if (suma >= 0) {
     document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
   }
@@ -66,20 +73,20 @@ function sub1(menu, price) {
 
 function add2(menu, price) {
   if (menu == "b") {
-    suma += parseInt(price);
+    sumb += parseInt(price);
     count2++;
   }
   let c = document.getElementById('mainName2').innerText;
   let d = document.getElementById('mainPrice2').innerText;
   let msg2 = c + " : " + d;
   document.querySelector("#msg2").innerHTML = msg2;
-  sum = suma;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
 }
 
 function sub2(menu, price) {
-  if (menu == "b" && suma >= 0)
-    suma -= parseInt(price);
+  if (menu == "b" && sumb >= 0)
+    sumb -= parseInt(price);
   count2--;
   if (count2 < 0) {
     count2 = 0;
@@ -87,31 +94,31 @@ function sub2(menu, price) {
   else if (count2 == 0) {
     document.querySelector("#msg2").innerHTML = "";
   }
-  sum = suma;
-  if (suma >= 0) {
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
+  if (sumb >= 0) {
     document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
   }
-  if (suma < 0) {
-    suma = 0;
+  if (sumb < 0) {
+    sumb = 0;
   }
 }
 
 function add3(menu, price) {
   if (menu == "c") {
-    suma += parseInt(price);
+    sumc += parseInt(price);
     count3++;
   }
   let e = document.getElementById('mainName3').innerText;
   let f = document.getElementById('mainPrice3').innerText;
   let msg3 = e + " : " + f;
   document.querySelector("#msg3").innerHTML = msg3;
-  sum = suma;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
 }
 
 function sub3(menu, price) {
-  if (menu == "c" && suma >= 0)
-    suma -= parseInt(price);
+  if (menu == "c" && sumc >= 0)
+    sumc -= parseInt(price);
   count3--;
   if (count3 < 0) {
     count3 = 0;
@@ -119,12 +126,12 @@ function sub3(menu, price) {
   else if (count3 == 0) {
     document.querySelector("#msg3").innerHTML = "";
   }
-  sum = suma;
-  if (suma >= 0) {
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
+  if (sumc >= 0) {
     document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
   }
-  if (suma < 0) {
-    suma = 0;
+  if (sumc < 0) {
+    sumc = 0;
   }
 }
 
