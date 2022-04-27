@@ -1,0 +1,92 @@
+*{
+  text-align: center;
+  margin: 0;
+padding: 0;
+list-style:none;
+box-sizing: border-box;
+  
+}
+a{
+text-decoration:none;
+display:block;
+}
+footer {
+                     
+  height : 450px;
+  width: 100%;
+  background-color: #000000b6;
+  bottom: 0px;
+  border-top: 1px solid #c4c4c4;
+  padding-top: 15px;
+  font-size: 20px;
+  /* text-align: center; */
+  display:inline-block;
+  vertical-align:top;
+  line-height: 50px;
+}
+.topfooter {
+  height : 350px;
+  margin-top: 25px;
+
+}
+.bottomfooter {
+  height : 100px;
+  color: #ffffff;
+  padding-bottom: 40px;
+
+}
+
+.ftdiv {
+  display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width:80%;
+	margin:0 auto;
+}
+
+.ftdiv a {color: #ffffff;
+ 
+}
+.ftdiv > a:hover {
+  color: #a19f9f;
+}
+
+.ftlogo {
+  display:flex; justify-content:center; align-items: center; color: #ffffff;
+}
+.ftlogo p {
+  float: left;
+  width: 80%;
+  text-align: left;
+}
+.ftlogo img{
+  width: 160px;
+  height: 160px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+div.clickEffect{
+  position: fixed;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: red;
+  border-radius: 50%;
+  animation:clickEffect 0.4s ease-out;
+  z-index:99999;
+}
+@keyframes clickEffect{
+  0%{
+    opacity: 1;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.25em;
+    border-width: 0.5em;
+  }
+  100%{
+    opacity: 0.2;
+    width: 15em; height:15em;
+    margin: -7.5em;
+    border-width: 0.03em;
+  }
+}
