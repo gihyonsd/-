@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>얼얼~한 매운맛 쿵푸마라</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <!--헤더-->
+
+    <header class="header">
+
+
+
+
+
+      <!--로고-->
+      <div class="logo">
+        <a href="3.html"><img src="img/가로화이트1.png"></a>
+      </div>
+
+
+      <!--네비게이션-->
+      <nav>
+        <ul class="topMenu">
+
+          <li><a href="#">쿵푸마라</a>
+            <ul>
+              <li><a href="#">쿵푸마라</a></li>
+              <li><a href="#">매장위치</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">메뉴</a>
+            <ul>
+              <li><a href="#">전체메뉴</a></li>
+              <li><a href="#">신메뉴</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">창업문의</a>
+            <ul>
+              <li><a href="#">문의사항</a></li>
+              <li><a href="#">창업비용</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">이벤트</a>
+            <ul>
+              <li><a href="#">이달의 행사</a></li>
+              <li><a href="#">쿠폰</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+      <!--SNS-->
+      <div class="sns">
+        <a href="https://www.youtube.com">
+          <img src="img/유튜브.png"></a>
+        <a href="https://www.kakaocorp.com">
+          <img src="img/카카오.png"></a>
+        <a href="https://www.facebook.com">
+          <img src="img/페이스북.png"></a>
+      </div>
+
+
+      <!--박스-->
+      <div style="background-color: rgba(203, 241, 65, 0.3);" class="box">
+        <p class="p1">얼얼한 매운맛이 땡길때는</p>
+        <p class="p2">쿵푸마라</p>
+
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box1">
+          <p class="p3">편안한 분위기에서 부담없이 즐기는 중화요리</p>
+          <img src="img/노배경.png">
+        </div>
+
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box2">
+          <p class="p3">합리적인 가격으로 부담없이 생각나는 곳</p>
+          <img src="img/노배경멘보샤.png">
+        </div>
+
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box3">
+          <p class="p3">맛있게 얼얼한 멈출수 없는 마라의 맛</p>
+          <img src="img/노배경얼얼.png">
+        </div>
+
+
+
+      </div>
+
+
+    </header>
+    <!--탭 메뉴 부분-->
+    <div class="tabMenu">
+      <input type="radio" id="maindish" name="tab" checked>
+      <input type="radio" id="side" name="tab">
+      <input type="radio" id="drink" name="tab">
+  
+      <section class="buttons">
+        <label for="maindish">메인 메뉴</label>
+        <label for="side">사이드 메뉴</label>
+        <label for="drink">음료수</label>
+      </section>
+  
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName1">마라탕</h2>
+                <p id="mainPrice1">7000원</p>
+                <button onclick="add1('a',7000);">+</button>
+                <button onclick="sub1('a',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2  id="mainName2">마라롱샤</h2>
+                <p id="mainPrice2">5000원</p>
+                <button onclick="add2('b',5000);">+</button>
+                <button onclick="sub2('b',5000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName3">꿔바로우</h2>
+                <p id="mainPrice3">7000원</p>
+                <button onclick="add3('c',7000);">+</button>
+                <button onclick="sub3('c',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName4">등등</h2>
+                <p id="mainPrice4">7000원</p>
+                <button onclick="add4('d',7000);">+</button>
+                <button onclick="sub4('d',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName1">사이드</h2>
+                <p id="sidePrice1">7000원</p>
+                <button onclick="add5('e',7000);">+</button>
+                <button onclick="sub5('e',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName2">사이드</h2>
+                <p id="sidePrice2">7000원</p>
+                <button onclick="add6('f',7000);">+</button>
+                <button onclick="sub6('f',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName3">사이드</h2>
+                <p id="sidePrice3">7000원</p>
+                <button onclick="add7('g',7000);">+</button>
+                <button onclick="sub7('g',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName4">사이드</h2>
+                <p id="sidePrice4">7000원</p>
+                <button onclick="add8('h',7000);">+</button>
+                <button onclick="sub8('h',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName1">사이다</h2>
+                <p id="drinkPrice1">7000원</p>
+                <button onclick="add9('i',7000);">+</button>
+                <button onclick="sub9('i',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName2">콜라</h2>
+                <p id="drinkPrice2">7000원</p>
+                <button onclick="add10('j',7000);">+</button>
+                <button onclick="sub10('j',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName3">테라</h2>
+                <p id="drinkPrice3">7000원</p>
+                <button onclick="add11('k',7000);">+</button>
+                <button onclick="sub11('k',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName4">소주</h2>
+                <p id="drinkPrice4">7000원</p>
+                <button onclick="add12('l',7000);">+</button>
+                <button onclick="sub12('l',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="result">
+      <h3>주문 내역</h3>
+      <form class="frm" action="">
+        <div id="msg1"></div>
+        <div id="msg2"></div>
+        <div id="msg3"></div>
+        <div id="msg4"></div>
+        <div id="msg5"></div>
+        <div id="msg6"></div>
+        <div id="msg7"></div>
+        <div id="msg8"></div>
+        <div id="msg9"></div>
+        <div id="msg10"></div>
+        <div id="msg11"></div>
+        <div id="msg12"></div>
+      </form>
+      <div id="total"></div>
+      <button class="reset" onclick="reset();">초기화</button>
+    </div>
+    <script src="js/script.js"></script>
+
+
+
+    <footer>
+      <style>
+        /* customizable snowflake styling */
+        .snowflake {
+          color: #fff;
+          font-size: 1em;
+          font-family: Arial, sans-serif;
+          text-shadow: 0 0 2.5px #000;
+        }
+        
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+        @-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+        @keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+        @keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}
+        .snowflake{position:fixed;top:-10%;z-index:9999;
+          -webkit-user-select:none;
+          -moz-user-select:none;
+          -ms-user-select:none;user-select:none;cursor:default;
+          -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+          -webkit-animation-duration:10s,3s;
+          -webkit-animation-timing-function:linear,ease-in-out;
+          -webkit-animation-iteration-count:infinite,infinite;
+          -webkit-animation-play-state:running,running;
+          animation-name:snowflakes-fall,snowflakes-shake;
+          animation-duration:10s,3s;
+          animation-timing-function:linear,ease-in-out;
+          animation-iteration-count:infinity;
+          animation-play-state:running,running}
+        .snowflake:nth-of-type(0){left:1%;
+          -webkit-animation-delay:0s,0s;
+          animation-delay:0s,0s}
+        .snowflake:nth-of-type(1){left:10%;
+          -webkit-animation-delay:1s,1s;
+          animation-delay:1s,1s}
+        .snowflake:nth-of-type(2){left:20%;
+          -webkit-animation-delay:6s,.5s;
+          animation-delay:6s,.5s}
+        .snowflake:nth-of-type(3){left:30%;
+          -webkit-animation-delay:4s,2s;
+          animation-delay:4s,2s}
+        .snowflake:nth-of-type(4){left:40%;
+          -webkit-animation-delay:2s,2s;
+          animation-delay:2s,2s}
+        .snowflake:nth-of-type(5){left:50%;
+          -webkit-animation-delay:8s,3s;
+          animation-delay:8s,3s}
+        .snowflake:nth-of-type(6){left:60%;
+          -webkit-animation-delay:6s,2s;
+          animation-delay:6s,2s}
+        .snowflake:nth-of-type(7){left:70%;
+          -webkit-animation-delay:2.5s,1s;
+          animation-delay:2.5s,1s}
+        .snowflake:nth-of-type(8){left:80%;
+          -webkit-animation-delay:1s,0s;
+          animation-delay:1s,0s}
+        .snowflake:nth-of-type(9){left:90%;
+          -webkit-animation-delay:3s,1.5s;
+          animation-delay:3s,1.5s}
+        .snowflake:nth-of-type(10){left:25%;
+          -webkit-animation-delay:2s,0s;
+          animation-delay:2s,0s}
+        .snowflake:nth-of-type(11){left:65%;
+          -webkit-animation-delay:4s,2.5s;
+          animation-delay:4s,2.5s}
+        </style>
+        <div class="snowflakes" aria-hidden="true">
+          <div class="snowflake">
+          <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+        </div>
+        <div class="topfooter">
+          <div class="ftlogo">
+            <a href="#"><img src="./img/white1.png" alt="하단 로고"></a>
+            <p>주식회사 쿵푸마라 주소 : 경기도 수원시 영통구 영통로 217번길 6 망포역 센터프라자 3층  
+              대표: 개발새발<br />사업자등록번호 : 22A-78-25493  소비자 대표번호 : 031-224-3626</p><br />
+          </div>
+          <div class="ftdiv">
+            <a href="#">회사소개</a>
+            <a href="#">찾아오시는 길</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이메일무단수집거부</a>
+          </div>
+          </div>
+        <div class="bottomfooter">
+          COPYRIGHT © by KUNG FU MARA. ALL RIGHTS RESERVED
+        </div>
+    </footer>
+  </div>
+</body>
+
+</html>
