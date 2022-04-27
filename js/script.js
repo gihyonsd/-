@@ -1,17 +1,15 @@
-// // var newWin = window.open("popup.html", "popup", "width=500, height=700", "left=400, top=200");
-// // if(newWin == null) {
-// //   alert("팝업이 차단되었으니 해제해주세요.");
-// // }
-function clickEffect(e) {
-  var d = document.createElement("div");
-  d.className = "clickEffect";
-  d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
-  document.body.appendChild(d);
-  d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
-}
-document.addEventListener('click', clickEffect);
-
-
+//  var newWin = window.open("popup.html", "popup", "width=100, height=700", "left=400, top=200");
+//  if(newWin == null) {
+//    alert("팝업이 차단되었으니 해제해주세요.");
+// }
+// function clickEffect(e) {
+//   var d = document.createElement("div");
+//   d.className = "clickEffect";
+//   d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
+//   document.body.appendChild(d);
+//   d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
+// }
+// document.addEventListener('click', clickEffect);
 
 
 let menu;
@@ -44,18 +42,23 @@ function add1(menu, price) {
     suma += parseInt(price);
     count1++;
   }
+  //let b = document.getElementById('mainPrice1').innerText;
+
   let a = document.getElementById('mainName1').innerText;
-  let b = document.getElementById('mainPrice1').innerText;
-  let msg1 = a + " : " + b;
+  let msg1 = a + " : " + suma + " " + count1 + "개";
   document.querySelector("#msg1").innerHTML = msg1;
   sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
 }
 
 function sub1(menu, price) {
-  if (menu == "a" && suma >= 0)
+  if (menu == "a" && suma >= 0){
     suma -= parseInt(price);
   count1--;
+  let a = document.getElementById('mainName1').innerText;
+  let msg1 = a + " : " + suma + " " + count1 + "개";
+  document.querySelector("#msg1").innerHTML = msg1;
+  }
   if (count1 < 0) {
     count1 = 0;
   }
