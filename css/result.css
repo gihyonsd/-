@@ -1,0 +1,29 @@
+.tabMenu {
+  float: left;
+  width: 800px;
+  height: 600px;
+  border: 2px solid black;
+  float: left;
+  margin-left: 200px;
+  border-radius: 2%;
+}
+
+
+
+
+.result {
+  width: 400px;
+  height: 600px;
+  border: 2px solid black;
+  float: left;
+  margin-left: 250px;
+  border-radius: 2%;
+}
+
+.result h3 {
+  line-height: 180px;
+}
+
+.result div {
+  line-height: 350%;
+}
