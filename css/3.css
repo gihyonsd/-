@@ -1,0 +1,220 @@
+* {
+  padding: 0 auto;
+}
+
+/*헤더*/
+.header {
+  width: 100%;
+  height: 800px; 
+  background-image: url("../img/배경2.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+
+  /*로고영역*/
+  .header > .logo {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    float: left;
+    margin-left: 800px;
+    margin-top: 10px;
+  }
+
+    /*로고이미지*/
+    .header > .logo > a img  {
+      width: 200px;
+      height: 80px;
+      margin-top: 10px;
+    }
+
+    
+/*메뉴영역 전체*/
+nav {
+  width: 510px;
+  height: 80px;
+  float: left;
+  margin-top: 10px;
+}
+
+/*메뉴*/
+.topMenu > li {
+  list-style: none;
+  float: left;
+  position: relative; /*서브메뉴 위치*/
+}
+
+/*메뉴 이름 설정*/
+.topMenu > li > a {
+  display: block; /*링크 태그 블록 스타일*/
+  color: whitesmoke; /*폰트 색상*/
+  font-weight: 600; /*폰트 굵기*/
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+/*메뉴 마우스오버 설정*/
+.topMenu > li > a:hover {        
+  color: coral;
+}
+
+/*서브메뉴*/
+.topMenu > li > ul {
+  display: none; /*서브 메뉴 처음에 안보이게 block이면 처음부터 보임*/
+  position: absolute;
+  width: 100px;
+  left: 10px;
+  /*배경색 투명하게*/
+  background-color: white;
+  list-style: none;
+  opacity: 0.5;
+}
+
+/*서브메뉴 글자 위치*/
+.topMenu > li > ul > li {
+  padding: 10px 10px 10px 0px;
+}
+
+/*서브메뉴 스타일*/
+.topMenu > li > ul > li > a {
+  font-size: 13px;
+  padding: 1px; 
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*마우스오버시 서브메뉴 보임*/
+.topMenu > li:hover > ul {
+  display: block; /*none으로 하면 안보임*/
+}
+
+/*마우스오버시 서브메뉴 색깔변경*/
+.topMenu > li > ul > li > a:hover {
+  color: coral;
+}
+
+/*sns*/
+.sns {
+  width: 100px;
+  height: 30px;
+  float: right;
+  position: relative;
+  margin-right: 170px;
+  margin-top: 40px;
+}
+
+  .sns img {
+    width: 30px;
+    height: 30px;
+    line-height: 50px;
+  }
+
+  .box {
+    width: 1500px;
+    height: 600px;
+    background-color: white;
+    --opacity: 0.7;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 200px;
+    border-radius: 1%;
+  }
+
+    .box > .p1 {
+      width: 1500px;
+      text-align: center;
+      color: white;
+      font-size: large;
+      margin-top: 30px;
+      text-align: center;
+      letter-spacing: 5px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    .box > .p2 {
+      width: 1500px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: xx-large;
+      line-height: 0px;
+      letter-spacing: 22px;
+      margin-left: 10px;
+    }
+
+    .box1 > .p3 {
+      font-size: xx-large;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+    }
+
+    .box2 > .p3 {
+      font-size: xx-large;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+    }
+
+    .box3 > .p3 {
+      font-size: xx-large;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+    }
+
+
+
+
+    .box > .box1 {
+      width: 400px;
+      height: 410px;
+      background-color: white;
+      margin-left: 90px;
+      margin-top: 10px;
+      position: relative;
+      float: left;
+      border-radius: 2%;
+    }
+
+    .box > .box2 {
+      width: 400px;
+      height: 410px;
+      background-color: white;
+      margin-left: 60px;
+      margin-top: 10px;
+      position: relative;
+      float: left;
+      border-radius: 2%;
+    }
+
+    .box > .box3 {
+      width: 400px;
+      height: 410px;
+      background-color: white;
+      margin-left: 60px;
+      margin-top: 10px;
+      position: relative;
+      float: left;
+      border-radius: 2%;
+      overflow: hidden;
+    }
+
+
+    .box > .box1 > img {
+      margin-left: 1px;
+      margin-top: 5px;
+    }
+
+    
+    .box > .box2 > img {
+      width: 410px;
+    }
+
+    .box > .box3 > img {
+      width: 400px;
+      margin-top: 60px;
+    }
