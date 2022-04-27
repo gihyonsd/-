@@ -133,9 +133,10 @@ footer {
   float: left;
   width: 80%;
   text-align: left;
+  line-height: 30px;
 }
 .ftlogo img{
-  width: 160px;
+  width: 130px;
   height: 160px;
   padding-top: 20px;
   padding-bottom: 20px;
