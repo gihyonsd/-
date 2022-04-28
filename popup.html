@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <link rel="stylesheet" href="css/style.css">
-
-<div class="main_box">      
+<style>
+  body {
+    background-color: beige;
+  }
+</style>
+<div class="main_box">
+  <div class="headlinebox">
+    <img src="img/누들.png">
+    <p class="headline">신선한 재료로 주문 즉시 조리합니다</p>
+  </div>
   <div class="tabMenu">
     <input type="radio" id="maindish" name="tab" checked>
     <input type="radio" id="side" name="tab">
@@ -48,9 +56,9 @@
 
         <li class="item">
           <div class="product">
-            <img src="img/메뉴 마라샹궈.png">
+            <img src="img/메뉴 어향가지.png">
             <div class="caption">
-              <h2 id="mainName3">마라샹궈</h2>
+              <h2 id="mainName3">어향가지</h2>
               <p id="mainPrice3">10,000원</p>
               <div class="but">
                 <button onclick="sub3('c',10000);">-</button>
@@ -63,14 +71,14 @@
 
         <li class="item">
           <div class="product">
-            <img src="img/메뉴 마라샹궈.png">
+            <img src="img/메뉴 유린기.png">
             <div class="caption">
-              <h2 id="mainName4">마라샹궈</h2>
-              <p id="mainPrice4">10,000원</p>
+              <h2 id="mainName4">유린기</h2>
+              <p id="mainPrice4">11,000원</p>
               <div class="but">
-                <button onclick="sub4('d',10000);">-</button>
+                <button onclick="sub4('d',11000);">-</button>
                 <div id="result4">0</div>
-                <button onclick="add4('d',10000);">+</button>
+                <button onclick="add4('d',11000);">+</button>
               </div>
             </div>
           </div>
@@ -158,14 +166,14 @@
 
         <li class="item">
           <div class="product">
-            <img src="img/메뉴 마라주먹밥.png">
+            <img src="img/메뉴 마라감자만두.png">
             <div class="caption">
-              <h2 id="sideName10">마라 주먹밥</h2>
-              <p id="sidePrice10">5,000원</p>
+              <h2 id="sideName10">마라 감자만두</h2>
+              <p id="sidePrice10">6,000원</p>
               <div class="but">
-                <button onclick="sub10('j',5000);">-</button>
+                <button onclick="sub10('j',6000);">-</button>
                 <div id="result10">0</div>
-                <button onclick="add10('j',5000);">+</button>
+                <button onclick="add10('j',6000);">+</button>
               </div>
             </div>
           </div>
@@ -173,14 +181,14 @@
 
         <li class="item">
           <div class="product">
-            <img src="img/메뉴 마라주먹밥.png">
+            <img src="img/메뉴 멘보샤.jpg">
             <div class="caption">
-              <h2 id="sideName11">마라 주먹밥</h2>
-              <p id="sidePrice11">5,000원</p>
+              <h2 id="sideName11">멘보샤</h2>
+              <p id="sidePrice11">7,000원</p>
               <div class="but">
-                <button onclick="sub11('k',5000);">-</button>
+                <button onclick="sub11('k',7000);">-</button>
                 <div id="result11">0</div>
-                <button onclick="add11('k',5000);">+</button>
+                <button onclick="add11('k',7000);">+</button>
               </div>
             </div>
           </div>
@@ -188,14 +196,14 @@
 
         <li class="item">
           <div class="product">
-            <img src="img/메뉴 마라주먹밥.png">
+            <img src="img/메뉴 볶음밥.png">
             <div class="caption">
-              <h2 id="sideName12">마라 주먹밥</h2>
-              <p id="sidePrice12">5,000원</p>
+              <h2 id="sideName12">볶음밥</h2>
+              <p id="sidePrice12">6,000원</p>
               <div class="but">
-                <button onclick="sub12('l',5000);">-</button>
+                <button onclick="sub12('l',6000);">-</button>
                 <div id="result12">0</div>
-                <button onclick="add12('l',5000);">+</button>
+                <button onclick="add12('l',6000);">+</button>
               </div>
             </div>
           </div>
@@ -250,28 +258,28 @@
         </li>
         <li class="item">
           <div class="product">
-            <img src="img/콜라.png">
+            <img src="img/메뉴 하이볼500ml.png">
             <div class="caption">
-              <h2 id="drinkName16">콜라</h2>
-              <p id="drinkPrice16">2,000원</p>
+              <h2 id="drinkName16">하이볼 500ml</h2>
+              <p id="drinkPrice16">8,000원</p>
               <div class="but">
-                <button onclick="sub16('p',2000);">-</button>
+                <button onclick="sub16('p',8000);">-</button>
                 <div id="result16">0</div>
-                <button onclick="add16('p',2000);">+</button>
+                <button onclick="add16('p',8000);">+</button>
               </div>
             </div>
           </div>
         </li>
         <li class="item">
           <div class="product">
-            <img src="img/콜라.png">
+            <img src="img/메뉴 이과두주2.png">
             <div class="caption">
-              <h2 id="drinkName17">콜라</h2>
-              <p id="drinkPrice17">2,000원</p>
+              <h2 id="drinkName17">이과두주</h2>
+              <p id="drinkPrice17">9,000원</p>
               <div class="but">
-                <button onclick="sub17('q',2000);">-</button>
+                <button onclick="sub17('q',9000);">-</button>
                 <div id="result17">0</div>
-                <button onclick="add17('q',2000);">+</button>
+                <button onclick="add17('q',9000);">+</button>
               </div>
             </div>
           </div>
@@ -293,9 +301,9 @@
       </ul>
     </div>
   </div>
-  
+
   <div class="result">
-    <h3>주문 내역</h3>
+    <h3>주문내역</h3>
     <form class="frm" action="">
       <div id="msg1"></div>
       <div id="msg2"></div>
@@ -317,7 +325,7 @@
       <div id="msg18"></div>
     </form>
     <div id="total"></div>
-    <button class="reset" onclick="reset();">초기화</button>
+    <button class="reset" onclick="reset();"><img src="img/쓰레기통.png"></button>
   </div>
 </div>
 <script src="js/script.js"></script>

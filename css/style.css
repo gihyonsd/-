@@ -282,7 +282,7 @@ nav {
 
   .box {
     width: 1500px;
-    height: 550px;
+    height: 620px;
     background-color: white;
     position: absolute;
     margin-top: 160px;
@@ -335,6 +335,14 @@ nav {
       text-align: center;
       color: black;
       margin-top: 40px;
+    }
+
+    .box > .p4 {
+      color: burlywood;
+      margin-top: 470px;
+      font-weight: bold;
+      font-size: xx-large;
+
     }
 
 
@@ -485,10 +493,10 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 .tabMenu {
   width: 800px;
   height: 700px;
-  border: 2px solid black;
   float: left;
   border-radius: 2%;
-  margin-left: 150px;
+  margin-left: 300px;
+  margin-top: 100px;
 }
 
 /*탭 모양 구성*/
@@ -506,17 +514,19 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
   text-align: center;
   box-sizing: border-box;
   /*테두리 지정*/
-  border-radius: 50%;
-  background-color: white;
   color: black;
   float: left;
   margin-left: 115px;
   margin-top: 25px;
-  border: 1px solid black;
+  /*글자크기*/
+  font-size: 22px;
+  border-bottom: 3px solid #d5b054;
+  box-shadow: inset 0 -1px 0 brown; /*형광펜 효과*/
 }
 
 .tabMenu .buttons label:hover {
   scale: 1.1;
+  color: brown;
 }
 
 .tabContent {
@@ -592,30 +602,73 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 .result {
   width: 400px;
   height: 700px;
-  border: 2px solid black;
+  border: 4px ridge black;
   float: left;
-  margin-left: 250px;
+  margin-left: 100px;
   border-radius: 2%;
   overflow: auto;
+  margin-top: 100px;
+  background-color: #ffefb9;
 }
-
+/*주문화면 글자*/
 .result h3 {
   line-height: 150px;
+  font-size: xx-large;
+  letter-spacing: 0.5em; /*주문내역 글자 간격*/
 }
 
 .result div {
   line-height: 350%;
 }
-
+.reset {
+  border: none;
+  background-color: #ffefb9;
+}
+/*주문화면 버튼*/
+.reset img {
+  width: 25px; height: 25px;
+}
+.reset img:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+.frm div {
+  font-size: 20px;
+}
+#total {
+  color: brown;
+  font-size: 25px;
+}
+/*주문 탭메뉴 + 주문결과 창 */
 .main_box {
   width: 1900px;
-  height: 700px;
+  height: 1000px;
+}
+.main_box .headlinebox {
+  height: 20px;
+  line-height: 120px;
+  display: flex;
+}
+.main_box .headlinebox .headline {
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 600px;
+}
+.main_box .headlinebox img{
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 520px;
+  width: 70px; height: 70px;
 }
 
 .pop {
   width: 100px;
   height: 50px;
 }
+.main {
+  background-color: beige;
+}
+
 
  /*슬라이드*/
 #slideShow {
@@ -624,13 +677,14 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
   height: 600px;
   overflow: hidden; /* 이미지가 크면 가린다 */
   position: relative;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin-left: 280px;
 }
 #slides {
   position: absolute;
 }
  #slides > img {
   width: 100%; /* 가로 #slideShow 최대폭으로 */
+  height: 600px;
   float: left;
 } 
 

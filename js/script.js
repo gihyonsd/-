@@ -2,14 +2,6 @@
 //  if(newWin == null) {
 //    alert("팝업이 차단되었으니 해제해주세요.");
 // }
-// function clickEffect(e) {
-//   var d = document.createElement("div");
-//   d.className = "clickEffect";
-//   d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
-//   document.body.appendChild(d);
-//   d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
-// }
-// document.addEventListener('click', clickEffect);
 
 
 let menu;
@@ -77,13 +69,14 @@ function add1(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
-
+  //정규식 숫자 콤마 금액표시하려고 씀
   let a = document.getElementById('mainName1').innerText;
-  let msg1 = a + " : " + suma + " " + count1 + "개";
+  let msg1 = a + " : " + suma.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count1 + "개";
   document.querySelector("#msg1").innerHTML = msg1;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub1(menu, price) {
@@ -91,12 +84,13 @@ function sub1(menu, price) {
     suma -= parseInt(price);
     count1--;
     let a = document.getElementById('mainName1').innerText;
-    let msg1 = a + " : " + suma + " " + count1 + "개";
+    let msg1 = a + " : " + suma.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count1 + "개";
     document.querySelector("#msg1").innerHTML = msg1;
 
     let resultElement = document.getElementById('result1');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -107,9 +101,10 @@ function sub1(menu, price) {
   else if (count1 == 0) {
     document.querySelector("#msg1").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;  
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (suma >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (suma < 0) {
     suma = 0;
@@ -125,13 +120,15 @@ function add2(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
+
 
   let b = document.getElementById('mainName2').innerText;
-  let msg2 = b + " : " + sumb + " " + count2 + "개";
+  let msg2 = b + " : " + sumb.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count2 + "개";
   document.querySelector("#msg2").innerHTML = msg2;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;  
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub2(menu, price) {
@@ -139,12 +136,13 @@ function sub2(menu, price) {
     sumb -= parseInt(price);
     count2--;
     let b = document.getElementById('mainName2').innerText;
-    let msg2 = b + " : " + sumb + " " + count2 + "개";
+    let msg2 = b + " : " + sumb.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count2 + "개";
     document.querySelector("#msg2").innerHTML = msg2;
 
     let resultElement = document.getElementById('result2');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -155,9 +153,10 @@ function sub2(menu, price) {
   else if (count2 == 0) {
     document.querySelector("#msg2").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;  
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumb >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumb < 0) {
     sumb = 0;
@@ -173,13 +172,15 @@ function add3(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
+
 
   let c = document.getElementById('mainName3').innerText;
-  let msg3 = c + " : " + sumc + " " + count3 + "개";
+  let msg3 = c + " : " + sumc.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count3 + "개";
   document.querySelector("#msg3").innerHTML = msg3;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;  
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub3(menu, price) {
@@ -187,12 +188,13 @@ function sub3(menu, price) {
     sumc -= parseInt(price);
     count3--;
     let c = document.getElementById('mainName3').innerText;
-    let msg3 = c + " : " + sumc + " " + count3 + "개";
+    let msg3 = c + " : " + sumc.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count3 + "개";
     document.querySelector("#msg3").innerHTML = msg3;
 
     let resultElement = document.getElementById('result3');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -203,9 +205,10 @@ function sub3(menu, price) {
   else if (count3 == 0) {
     document.querySelector("#msg3").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;  
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumc >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumc < 0) {
     sumc = 0;
@@ -221,13 +224,15 @@ function add4(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
+
 
   let d = document.getElementById('mainName4').innerText;
-  let msg4 = d + " : " + sumd + " " + count4 + "개";
+  let msg4 = d + " : " + sumd.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count4 + "개";
   document.querySelector("#msg4").innerHTML = msg4;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub4(menu, price) {
@@ -235,12 +240,13 @@ function sub4(menu, price) {
     sumd -= parseInt(price);
     count4--;
     let d = document.getElementById('mainName4').innerText;
-    let msg4 = d + " : " + sumd + " " + count4 + "개";
+    let msg4 = d + " : " + sumd.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count4 + "개";
     document.querySelector("#msg4").innerHTML = msg4;
 
     let resultElement = document.getElementById('result4');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -251,9 +257,10 @@ function sub4(menu, price) {
   else if (count4 == 0) {
     document.querySelector("#msg4").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumd >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumd < 0) {
     sumd = 0;
@@ -269,13 +276,14 @@ function add5(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
 
   let e = document.getElementById('mainName5').innerText;
-  let msg5 = e + " : " + sume + " " + count5 + "개";
+  let msg5 = e + " : " + sume.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count5 + "개";
   document.querySelector("#msg5").innerHTML = msg5;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub5(menu, price) {
@@ -283,12 +291,13 @@ function sub5(menu, price) {
     sume -= parseInt(price);
     count5--;
     let e = document.getElementById('mainName5').innerText;
-    let msg5 = e + " : " + sume + " " + count5 + "개";
+    let msg5 = e + " : " + sume.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count5 + "개";
     document.querySelector("#msg5").innerHTML = msg5;
 
     let resultElement = document.getElementById('result5');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -299,9 +308,10 @@ function sub5(menu, price) {
   else if (count5 == 0) {
     document.querySelector("#msg5").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sume >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sume < 0) {
     sume = 0;
@@ -317,13 +327,14 @@ function add6(menu, price) {
     number = parseInt(number) + 1;
     resultElement.innerText = number;
   }
-  //let b = document.getElementById('mainPrice1').innerText;
 
   let f = document.getElementById('mainName3').innerText;
-  let msg6 = f + " : " + sumf + " " + count6 + "개";
+  let msg6 = f + " : " + sumf.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count6 + "개";
   document.querySelector("#msg6").innerHTML = msg6;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub6(menu, price) {
@@ -331,12 +342,13 @@ function sub6(menu, price) {
     sumf -= parseInt(price);
     count6--;
     let f = document.getElementById('mainName3').innerText;
-    let msg6 = f + " : " + sumf + " " + count6 + "개";
+    let msg6 = f + " : " + sumf.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count6 + "개";
     document.querySelector("#msg6").innerHTML = msg6;
 
     let resultElement = document.getElementById('result6');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -347,9 +359,10 @@ function sub6(menu, price) {
   else if (count6 == 0) {
     document.querySelector("#msg6").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumf >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumf < 0) {
     sumf = 0;
@@ -368,10 +381,12 @@ function add7(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let g = document.getElementById('sideName7').innerText;
-  let msg7 = g + " : " + sumg + " " + count7 + "개";
+  let msg7 = g + " : " + sumg.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count7 + "개";
   document.querySelector("#msg7").innerHTML = msg7;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub7(menu, price) {
@@ -379,12 +394,13 @@ function sub7(menu, price) {
     sumg -= parseInt(price);
     count7--;
     let g = document.getElementById('sideName7').innerText;
-    let msg7 = g + " : " + sumg + " " + count7 + "개";
+    let msg7 = g + " : " + sumg.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count7 + "개";
     document.querySelector("#msg7").innerHTML = msg7;
 
     let resultElement = document.getElementById('result7');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -395,9 +411,10 @@ function sub7(menu, price) {
   else if (count7 == 0) {
     document.querySelector("#msg7").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumg >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumg < 0) {
     sumg = 0;
@@ -416,10 +433,12 @@ function add8(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let h = document.getElementById('sideName8').innerText;
-  let msg8 = h + " : " + sumh + " " + count8 + "개";
+  let msg8 = h + " : " + sumh.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count8 + "개";
   document.querySelector("#msg8").innerHTML = msg8;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub8(menu, price) {
@@ -427,12 +446,13 @@ function sub8(menu, price) {
     sumh -= parseInt(price);
     count8--;
     let h = document.getElementById('sideName8').innerText;
-    let msg8 = h + " : " + sumh + " " + count8 + "개";
+    let msg8 = h + " : " + sumh.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count8 + "개";
     document.querySelector("#msg8").innerHTML = msg8;
 
     let resultElement = document.getElementById('result8');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -443,9 +463,10 @@ function sub8(menu, price) {
   else if (count8 == 0) {
     document.querySelector("#msg8").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumh >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumh < 0) {
     sumh = 0;
@@ -464,10 +485,12 @@ function add9(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let i = document.getElementById('sideName9').innerText;
-  let msg9 = i + " : " + sumi + " " + count9 + "개";
+  let msg9 = i + " : " + sumi.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count9 + "개";
   document.querySelector("#msg9").innerHTML = msg9;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub9(menu, price) {
@@ -475,12 +498,13 @@ function sub9(menu, price) {
     sumi -= parseInt(price);
     count9--;
     let i = document.getElementById('sideName9').innerText;
-    let msg9 = i + " : " + sumi + " " + count9 + "개";
+    let msg9 = i + " : " + sumi.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count9 + "개";
     document.querySelector("#msg9").innerHTML = msg9;
 
     let resultElement = document.getElementById('result9');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -491,9 +515,10 @@ function sub9(menu, price) {
   else if (count9 == 0) {
     document.querySelector("#msg9").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumi >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumi < 0) {
     sumi = 0;
@@ -512,10 +537,12 @@ function add10(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let j = document.getElementById('sideName10').innerText;
-  let msg10 = j + " : " + sumj + " " + count10 + "개";
+  let msg10 = j + " : " + sumj.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count10 + "개";
   document.querySelector("#msg10").innerHTML = msg10;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub10(menu, price) {
@@ -523,12 +550,13 @@ function sub10(menu, price) {
     sumj -= parseInt(price);
     count10--;
     let j = document.getElementById('sideName10').innerText;
-    let msg10 = j + " : " + sumj + " " + count10 + "개";
+    let msg10 = j + " : " + sumj.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count10 + "개";
     document.querySelector("#msg10").innerHTML = msg10;
 
     let resultElement = document.getElementById('result10');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -539,9 +567,10 @@ function sub10(menu, price) {
   else if (count10 == 0) {
     document.querySelector("#msg10").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumj >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumj < 0) {
     sumj = 0;
@@ -560,10 +589,12 @@ function add11(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let k = document.getElementById('sideName11').innerText;
-  let msg11 = k + " : " + sumk + " " + count11 + "개";
+  let msg11 = k + " : " + sumk.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count11 + "개";
   document.querySelector("#msg11").innerHTML = msg11;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub11(menu, price) {
@@ -571,12 +602,13 @@ function sub11(menu, price) {
     sumk -= parseInt(price);
     count11--;
     let k = document.getElementById('sideName11').innerText;
-    let msg11 = k + " : " + sumk + " " + count11 + "개";
+    let msg11 = k + " : " + sumk.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count11 + "개";
     document.querySelector("#msg11").innerHTML = msg11;
 
     let resultElement = document.getElementById('result11');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -587,9 +619,10 @@ function sub11(menu, price) {
   else if (count11 == 0) {
     document.querySelector("#msg11").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumk >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumk < 0) {
     sumk = 0;
@@ -608,10 +641,12 @@ function add12(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let l = document.getElementById('sideName12').innerText;
-  let msg12 = l + " : " + suml + " " + count12 + "개";
+  let msg12 = l + " : " + suml.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count12 + "개";
   document.querySelector("#msg12").innerHTML = msg12;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub12(menu, price) {
@@ -619,12 +654,13 @@ function sub12(menu, price) {
     suml -= parseInt(price);
     count12--;
     let l = document.getElementById('sideName12').innerText;
-    let msg12 = l + " : " + suml + " " + count12 + "개";
+    let msg12 = l + " : " + suml.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count12 + "개";
     document.querySelector("#msg12").innerHTML = msg12;
 
     let resultElement = document.getElementById('result12');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -635,9 +671,10 @@ function sub12(menu, price) {
   else if (count12 == 0) {
     document.querySelector("#msg12").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (suml >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (suml < 0) {
     suml = 0;
@@ -656,10 +693,12 @@ function add13(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let m = document.getElementById('drinkName13').innerText;
-  let msg13 = m + " : " + summ + " " + count13 + "개";
+  let msg13 = m + " : " + summ.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count13 + "개";
   document.querySelector("#msg13").innerHTML = msg13;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub13(menu, price) {
@@ -667,12 +706,13 @@ function sub13(menu, price) {
     summ -= parseInt(price);
     count13--;
     let m = document.getElementById('drinkName13').innerText;
-    let msg13 = m + " : " + summ + " " + count13 + "개";
+    let msg13 = m + " : " + summ.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count13 + "개";
     document.querySelector("#msg13").innerHTML = msg13;
 
     let resultElement = document.getElementById('result13');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -683,9 +723,10 @@ function sub13(menu, price) {
   else if (count13 == 0) {
     document.querySelector("#msg13").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (summ >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (summ < 0) {
     summ = 0;
@@ -704,10 +745,12 @@ function add14(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let n = document.getElementById('drinkName14').innerText;
-  let msg14 = n + " : " + sumn + " " + count14 + "개";
+  let msg14 = n + " : " + sumn.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count14 + "개";
   document.querySelector("#msg14").innerHTML = msg14;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub14(menu, price) {
@@ -715,12 +758,13 @@ function sub14(menu, price) {
     sumn -= parseInt(price);
     count14--;
     let n = document.getElementById('drinkName14').innerText;
-    let msg14 = n + " : " + sumn + " " + count14 + "개";
+    let msg14 = n + " : " + sumn.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count14 + "개";
     document.querySelector("#msg14").innerHTML = msg14;
 
     let resultElement = document.getElementById('result14');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -731,9 +775,10 @@ function sub14(menu, price) {
   else if (count14 == 0) {
     document.querySelector("#msg14").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumn >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumn < 0) {
     sumn = 0;
@@ -752,10 +797,12 @@ function add15(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let o = document.getElementById('drinkName15').innerText;
-  let msg15 = o + " : " + sumo + " " + count15 + "개";
+  let msg15 = o + " : " + sumo.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count15 + "개";
   document.querySelector("#msg15").innerHTML = msg15;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub15(menu, price) {
@@ -763,12 +810,13 @@ function sub15(menu, price) {
     sumo -= parseInt(price);
     count15--;
     let o = document.getElementById('drinkName15').innerText;
-    let msg15 = o + " : " + sumo + " " + count15 + "개";
+    let msg15 = o + " : " + sumo.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count15 + "개";
     document.querySelector("#msg15").innerHTML = msg15;
 
     let resultElement = document.getElementById('result15');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -779,9 +827,10 @@ function sub15(menu, price) {
   else if (count15 == 0) {
     document.querySelector("#msg15").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumo >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumo < 0) {
     sumo = 0;
@@ -800,10 +849,12 @@ function add16(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let p = document.getElementById('drinkName16').innerText;
-  let msg16 = p + " : " + sump + " " + count16 + "개";
+  let msg16 = p + " : " + sump.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count16 + "개";
   document.querySelector("#msg16").innerHTML = msg16;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub16(menu, price) {
@@ -811,12 +862,13 @@ function sub16(menu, price) {
     sump -= parseInt(price);
     count16--;
     let p = document.getElementById('drinkName16').innerText;
-    let msg16 = p + " : " + sump + " " + count16 + "개";
+    let msg16 = p + " : " + sump.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count16 + "개";
     document.querySelector("#msg16").innerHTML = msg16;
 
     let resultElement = document.getElementById('result16');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -827,9 +879,10 @@ function sub16(menu, price) {
   else if (count16 == 0) {
     document.querySelector("#msg16").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sump >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sump < 0) {
     sump = 0;
@@ -848,10 +901,12 @@ function add17(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let q = document.getElementById('drinkName17').innerText;
-  let msg17 = q + " : " + sumq + " " + count17 + "개";
+  let msg17 = q + " : " + sumq.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count17 + "개";
   document.querySelector("#msg17").innerHTML = msg17;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub17(menu, price) {
@@ -859,12 +914,13 @@ function sub17(menu, price) {
     sumq -= parseInt(price);
     count17--;
     let q = document.getElementById('drinkName17').innerText;
-    let msg17 = q + " : " + sumq + " " + count17 + "개";
+    let msg17 = q + " : " + sumq.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count17 + "개";
     document.querySelector("#msg17").innerHTML = msg17;
 
     let resultElement = document.getElementById('result17');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -875,9 +931,10 @@ function sub17(menu, price) {
   else if (count17 == 0) {
     document.querySelector("#msg17").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumq >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumq < 0) {
     sumq = 0;
@@ -896,10 +953,12 @@ function add18(menu, price) {
   //let b = document.getElementById('mainPrice1').innerText;
 
   let r = document.getElementById('drinkName18').innerText;
-  let msg18 = r + " : " + sumr + " " + count18 + "개";
+  let msg18 = r + " : " + sumr.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count18 + "개";
   document.querySelector("#msg18").innerHTML = msg18;
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
-  document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function sub18(menu, price) {
@@ -907,12 +966,13 @@ function sub18(menu, price) {
     sumr -= parseInt(price);
     count18--;
     let r = document.getElementById('drinkName18').innerText;
-    let msg18 = r + " : " + sumr + " " + count18 + "개";
+    let msg18 = r + " : " + sumr.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + " " + count18 + "개";
     document.querySelector("#msg18").innerHTML = msg18;
 
     let resultElement = document.getElementById('result18');
     let number = resultElement.innerText;
-    if(number >= 0){
+    if (number >= 0) {
       number = parseInt(number) - 1;
     }
     resultElement.innerText = number;
@@ -923,9 +983,10 @@ function sub18(menu, price) {
   else if (count18 == 0) {
     document.querySelector("#msg18").innerHTML = "";
   }
-  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh +sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
+  sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh + sumi + sumj + sumk + suml + summ + sumn + sumo + sump + sumq + sumr;
   if (sumr >= 0) {
-    document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
+    document.querySelector("#total").innerHTML = "합계 = " + sum.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   }
   if (sumr < 0) {
     sumr = 0;
@@ -988,9 +1049,9 @@ function reset() {
   document.querySelector("#result16").innerHTML = 0;
   document.querySelector("#result17").innerHTML = 0;
   document.querySelector("#result18").innerHTML = 0;
-    
 
-  
+
+
   document.querySelector("#msg1").innerHTML = "";
   document.querySelector("#msg2").innerHTML = "";
   document.querySelector("#msg3").innerHTML = "";
