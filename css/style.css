@@ -289,7 +289,7 @@ nav {
 
   .box {
     width: 1500px;
-    height: 620px;
+    height: 550px;
     background-color: white;
     position: absolute;
     margin-top: 160px;
@@ -342,14 +342,6 @@ nav {
       text-align: center;
       color: black;
       margin-top: 40px;
-    }
-
-    .box > .p4 {
-      color: burlywood;
-      margin-top: 470px;
-      font-weight: bold;
-      font-size: xx-large;
-
     }
 
 
@@ -596,6 +588,12 @@ input:nth-of-type(3):checked~section.buttons>label:nth-of-type(3) {
 .tabContent ul li .product .caption .but button {
   margin: 5px;
   width: 20px;
+  margin-left: 10px;
+}
+.tabContent ul li .product .caption .but div {
+  color: white;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .caption h2 {
@@ -734,3 +732,4 @@ div.clickEffect {
     border-width: 0.03em;
   }
 }
+

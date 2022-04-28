@@ -41,6 +41,10 @@ function add1(menu, price) {
   if (menu == "a") {
     suma += parseInt(price);
     count1++;
+    let resultElement = document.getElementById('result');
+    let number = resultElement.innerText;
+    number = parseInt(number) + 1;
+    resultElement.innerText = number;
   }
   //let b = document.getElementById('mainPrice1').innerText;
 
@@ -52,12 +56,19 @@ function add1(menu, price) {
 }
 
 function sub1(menu, price) {
-  if (menu == "a" && suma >= 0){
+  if (menu == "a" && suma > 0) {
     suma -= parseInt(price);
-  count1--;
-  let a = document.getElementById('mainName1').innerText;
-  let msg1 = a + " : " + suma + " " + count1 + "개";
-  document.querySelector("#msg1").innerHTML = msg1;
+    count1--;
+    let a = document.getElementById('mainName1').innerText;
+    let msg1 = a + " : " + suma + " " + count1 + "개";
+    document.querySelector("#msg1").innerHTML = msg1;
+
+    let resultElement = document.getElementById('result');
+    let number = resultElement.innerText;
+    if(number >= 0){
+      number = parseInt(number) - 1;
+    }
+    resultElement.innerText = number;
   }
   if (count1 < 0) {
     count1 = 0;
@@ -78,19 +89,35 @@ function add2(menu, price) {
   if (menu == "b") {
     sumb += parseInt(price);
     count2++;
+    let resultElement = document.getElementById('result1');
+    let number = resultElement.innerText;
+    number = parseInt(number) + 1;
+    resultElement.innerText = number;
   }
-  let c = document.getElementById('mainName2').innerText;
-  let d = document.getElementById('mainPrice2').innerText;
-  let msg2 = c + " : " + d;
+  //let b = document.getElementById('mainPrice1').innerText;
+
+  let b = document.getElementById('mainName2').innerText;
+  let msg2 = b + " : " + sumb + " " + count2 + "개";
   document.querySelector("#msg2").innerHTML = msg2;
   sum = suma + sumb + sumc + sumd + sume + sumf + sumg + sumh;
   document.querySelector("#total").innerHTML = "합계 = " + sum + "원";
 }
 
 function sub2(menu, price) {
-  if (menu == "b" && sumb >= 0)
+  if (menu == "b" && sumb > 0) {
     sumb -= parseInt(price);
-  count2--;
+    count2--;
+    let b = document.getElementById('mainName2').innerText;
+    let msg2 = b + " : " + sumb + " " + count2 + "개";
+    document.querySelector("#msg2").innerHTML = msg2;
+
+    let resultElement = document.getElementById('result1');
+    let number = resultElement.innerText;
+    if(number >= 0){
+      number = parseInt(number) - 1;
+    }
+    resultElement.innerText = number;
+  }
   if (count2 < 0) {
     count2 = 0;
   }
