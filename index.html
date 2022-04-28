@@ -4,20 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <title>얼얼~한 매운맛 쿵푸마라</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="./css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
 
+  
   <div class="container">
     <!--헤더-->
 
     <header class="header">
 
+
+
+
+
       <!--로고-->
       <div class="logo">
-        <a href="index.html"><img src="img/가로화이트1.png"></a>
+        <a href="3.html"><img src="img/가로화이트1.png"></a>
       </div>
 
 
@@ -71,79 +76,280 @@
         <p class="p1">얼얼한 매운맛이 땡길때는</p>
         <p class="p2">쿵푸마라</p>
 
-        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box1"
-        onclick="window.open('popup.html', 'popup', 'width=1800, height=800, location=no, status=no, scrollbars=yes');">
-          <p class="p3"><span style="color:brown">편안한 분위기</span>에서 다같이<br> 즐기는 중화요리</p>
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box1">
+          <p class="p3">편안한 분위기에서 부담없이 즐기는 중화요리</p>
           <img src="img/노배경.png">
         </div>
-      
 
-        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box2"
-        onclick="window.open('popup.html', 'popup', 'width=1800, height=800, location=no, status=no, scrollbars=yes');">
-          <p class="p3"><span style="color:brown">합리적인 가격</span>으로<br> 부담없이 생각나는 곳</p>
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box2">
+          <p class="p3">합리적인 가격으로 부담없이 생각나는 곳</p>
           <img src="img/노배경멘보샤.png">
         </div>
 
-        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box3"
-        onclick="window.open('popup.html', 'popup', 'width=1800, height=800, location=no, status=no, scrollbars=yes');">
-          <p class="p3">맛있게 얼얼한<br>멈출수 없는 <span style="color:brown">마라의 맛</span></p>
+        <div style="background-color: rgba(255, 255, 255, 0.75);" class="box3">
+          <p class="p3">맛있게 얼얼한 멈출수 없는 마라의 맛</p>
           <img src="img/노배경얼얼.png">
         </div>
 
-        <p class="p4"><span style="color:brown">이미지를 클릭</span>하면 <span style="color:brown">맛있는 음식을 주문</span> 할 수 있어요!</p>
+
 
       </div>
+
 
     </header>
+
+    <!--탭 메뉴 부분-->
+    <!-- <div class="tabMenu">
+      <input type="radio" id="maindish" name="tab" checked>
+      <input type="radio" id="side" name="tab">
+      <input type="radio" id="drink" name="tab">
   
-    
-    <div class="order">
-    
+      <section class="buttons">
+        <label for="maindish">메인 메뉴</label>
+        <label for="side">사이드 메뉴</label>
+        <label for="drink">음료수</label>
+      </section>
+  
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName1">마라탕</h2>
+                <p id="mainPrice1">7000원</p>
+                <button onclick="add1('a',7000);">+</button>
+                <button onclick="sub1('a',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2  id="mainName2">마라롱샤</h2>
+                <p id="mainPrice2">5000원</p>
+                <button onclick="add2('b',5000);">+</button>
+                <button onclick="sub2('b',5000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName3">꿔바로우</h2>
+                <p id="mainPrice3">7000원</p>
+                <button onclick="add3('c',7000);">+</button>
+                <button onclick="sub3('c',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id="mainName4">등등</h2>
+                <p id="mainPrice4">7000원</p>
+                <button onclick="add4('d',7000);">+</button>
+                <button onclick="sub4('d',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName1">사이드</h2>
+                <p id="sidePrice1">7000원</p>
+                <button onclick="add5('e',7000);">+</button>
+                <button onclick="sub5('e',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName2">사이드</h2>
+                <p id="sidePrice2">7000원</p>
+                <button onclick="add6('f',7000);">+</button>
+                <button onclick="sub6('f',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName3">사이드</h2>
+                <p id="sidePrice3">7000원</p>
+                <button onclick="add7('g',7000);">+</button>
+                <button onclick="sub7('g',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "sideName4">사이드</h2>
+                <p id="sidePrice4">7000원</p>
+                <button onclick="add8('h',7000);">+</button>
+                <button onclick="sub8('h',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabContent">
+        <ul>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName1">사이다</h2>
+                <p id="drinkPrice1">7000원</p>
+                <button onclick="add9('i',7000);">+</button>
+                <button onclick="sub9('i',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName2">콜라</h2>
+                <p id="drinkPrice2">7000원</p>
+                <button onclick="add10('j',7000);">+</button>
+                <button onclick="sub10('j',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName3">테라</h2>
+                <p id="drinkPrice3">7000원</p>
+                <button onclick="add11('k',7000);">+</button>
+                <button onclick="sub11('k',7000);">-</button>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="product">
+              <img src="#">
+              <div class="caption">
+                <h2 id = "drinkName4">소주</h2>
+                <p id="drinkPrice4">7000원</p>
+                <button onclick="add12('l',7000);">+</button>
+                <button onclick="sub12('l',7000);">-</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="result">
+      <h3>주문 내역</h3>
+      <form class="frm" action="">
+        <div id="msg1"></div>
+        <div id="msg2"></div>
+        <div id="msg3"></div>
+        <div id="msg4"></div>
+        <div id="msg5"></div>
+        <div id="msg6"></div>
+        <div id="msg7"></div>
+        <div id="msg8"></div>
+        <div id="msg9"></div>
+        <div id="msg10"></div>
+        <div id="msg11"></div>
+        <div id="msg12"></div>
+      </form>
+      <div id="total"></div>
+      <button class="reset" onclick="reset();">초기화</button>
+    </div>
+    <script src="js/script.js"></script> -->
+
+
+    <!--슬라이드이미지-->
+    <div id="slideShow">
+      <img src="./img/배너44.png">
+      <img src="./img/배너3.png">
+      <img src="./img/배너어.png">
+      <img src="./img/배너88.png">
+      <img src="./img/배너55.png">
+    </div>
+    <script>
+      /* Step 3 이미지 슬라이드 자바스크립트 */
+      var current = 0; /* 이미지 순서 */
+      showSlides(); /* 첫번째 이미지를 보여줌 */
+    
+      function showSlides() {
+        var slides = document.querySelectorAll("#slideShow > img");
+        for(let i = 0; i<slides.length; i++) {
+          slides[i].style.display = "none"; /* 모든 이미지 감춤 */
+        }
+        current++; /* 다음 이미지로 이동 */
+        if(current > slides.length) /* 마지막 이미지 */
+        current=1; /* 첫번째 이미지로 초기화 */
+        /* 현재 위치에 이미지 보이게 */
+        slides[current - 1].style.display = "block"; 
+        setTimeout(showSlides, 2000); /* 2초마다 showSlides() 실행 */
+      }
+    </script>
+
+
+
 
     <footer>
-      <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">
+        <div class="snowflakes" aria-hidden="true">
+          <div class="snowflake">
           <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
+          <div class="snowflake">
+            <img src="./img/pepper.png" width="50px" height="50px">
+          </div>
         </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
+        <div class="topfooter">
+          <div class="ftlogo">
+            <a href="#"><img src="./img/white1.png" alt="하단 로고"></a>
+            <p>주식회사 쿵푸마라 주소 : 경기도 수원시 영통구 영통로 217번길 6 망포역 센터프라자 3층  
+              대표: 개발새발<br />사업자등록번호 : 22A-78-25493  소비자 대표번호 : 031-224-3626</p><br />
+          </div>
+          <div class="ftdiv">
+            <a href="#">회사소개</a>
+            <a href="#">찾아오시는 길</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이메일무단수집거부</a>
+          </div>
+          </div>
+        <div class="bottomfooter">
+          COPYRIGHT © by KUNG FU MARA. ALL RIGHTS RESERVED
         </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
-        </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
-        </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
-        </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
-        </div>
-        <div class="snowflake">
-          <img src="./img/pepper.png" width="50px" height="50px">
-        </div>
-      </div>
-      <div class="topfooter">
-        <div class="ftlogo">
-          <a href="#"><img src="./img/white1.png" alt="하단 로고"></a>       
-          <p>주식회사 쿵푸마라 │ 주소 : 경기도 수원시 영통구 영통로 217번길 6 망포역 센터프라자 3층 │
-            대표: 개발새발<br>사업자등록번호 : 22A-78-25493 │ 소비자 대표번호 : 031-224-3626</p>
-        </div>
-        <div class="ftdiv">
-          <a href="#">회사소개</a>
-          <a href="#">찾아오시는 길</a>
-          <a href="#">이용약관</a>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">이메일무단수집거부</a>
-        </div>
-      </div>
-      <div class="bottomfooter">
-        COPYRIGHT © by KUNG FU MARA. ALL RIGHTS RESERVED
-      </div>
     </footer>
-
+  </div>
 </body>
 
 </html>
