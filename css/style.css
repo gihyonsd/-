@@ -491,6 +491,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 /*탭 모양 구성*/
 .tabMenu .buttons {
   overflow: hidden;
+  height: 100px;
 }
 
 .tabMenu .buttons label {
@@ -507,6 +508,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
   color: black;
   float: left;
   margin-left: 115px;
+  margin-top: 25px;
 }
 
 .tabMenu .buttons label:hover {
@@ -549,13 +551,13 @@ input:nth-of-type(3):checked~section.buttons>label:nth-of-type(3) {
   list-style: none;
 }
 
-.tabContent ul li .product {
+.tabContent ul li .product { /*상품 간격 조정 및 포지션 변경*/
   position: relative;
   overflow: hidden;
   width: 170px;
   height: 170px;
   float: left;
-  margin: 50px 50px 50px 100px;
+  margin: 20px 0px 0px 140px;
 }
 
 .tabContent ul li .product img {
