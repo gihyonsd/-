@@ -305,6 +305,7 @@
   <div class="result">
     <h3>주문내역</h3>
     <form class="frm" action="">
+      <div class="orderdiv">
       <div id="msg1"></div>
       <div id="msg2"></div>
       <div id="msg3"></div>
@@ -323,9 +324,13 @@
       <div id="msg16"></div>
       <div id="msg17"></div>
       <div id="msg18"></div>
+      <div id="total"></div>
+      <button class="reset" onclick="reset();"><img src="img/쓰레기통.png"></button>
+      </div>
     </form>
-    <div id="total"></div>
-    <button class="reset" onclick="reset();"><img src="img/쓰레기통.png"></button>
+    <div>
+      <button class="orderMenu" onclick="reset();">주문하기</button>
+    </div>
   </div>
 </div>
 <script src="js/script.js"></script>

@@ -620,10 +620,28 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 .result div {
   line-height: 350%;
 }
+.orderdiv {
+  height: 410px;
+  overflow: auto;
+}
+/*주문하기 버튼*/
+.orderMenu {
+  position: relative;
+  top: 90px;
+  border: none;
+  background-color: #ffefb9;
+  font-size: 25px;
+}
+.orderMenu:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
 .reset {
   border: none;
   background-color: #ffefb9;
 }
+
 /*주문화면 버튼*/
 .reset img {
   width: 25px; height: 25px;
