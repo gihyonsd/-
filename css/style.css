@@ -685,6 +685,8 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 }
 .main {
   background-color: beige;
+  width: 1900px;
+  height: 600px
 }
 
 
@@ -724,6 +726,7 @@ footer {
   display: inline-block;
   vertical-align: top;
   line-height: 50px;
+  float: left;
 }
 
 .topfooter {
