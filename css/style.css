@@ -576,8 +576,9 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 }
 
 .tabContent ul li .product .caption .but {
-  margin-left: 40px;
+  margin-left: 45px;
   display: flex;
+  margin-right: 48px;
 }
 
 .tabContent ul li .product .caption .but button {
