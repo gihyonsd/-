@@ -1,11 +1,14 @@
 /*전체*/
 * {
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
   font-family: 'Cafe24Dangdanghae';
+}
+body {
+  background-color: beige;
 }
 
 /*폰트*/
@@ -697,7 +700,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
   height: 600px;
   overflow: hidden; /* 이미지가 크면 가린다 */
   position: relative;
-  margin-left: 280px;
+  
 }
 #slides {
   position: absolute;
@@ -726,7 +729,6 @@ footer {
   display: inline-block;
   vertical-align: top;
   line-height: 50px;
-  float: left;
 }
 
 .topfooter {
