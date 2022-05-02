@@ -528,7 +528,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 }
 
 .tabMenu .buttons label:hover {
-  scale: 1.1;
+  transform : scale(1.1);
   color: brown;
 }
 
@@ -638,7 +638,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 }
 .orderMenu:hover {
   cursor: pointer;
-  scale: 1.2;
+  transform : scale(1.2);
 }
 
 .reset {
@@ -652,7 +652,7 @@ input:nth-of-type(3):checked~div:nth-of-type(3) {
 }
 .reset img:hover {
   cursor: pointer;
-  scale: 1.2;
+  transform : scale(1.2);
 }
 .frm div {
   font-size: 20px;
